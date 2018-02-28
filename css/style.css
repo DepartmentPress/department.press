@@ -1,0 +1,26 @@
+body, html {
+  padding: 0;
+  margin: 0;
+}
+
+.entry {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.entry--image {
+  display: inline-block;
+}
+
+.entry--image__landscape {
+  max-width: 90vw;
+  height: auto;
+}
+
+.entry--image__portrait {
+  max-height: 90vh;
+  width: auto;
+}

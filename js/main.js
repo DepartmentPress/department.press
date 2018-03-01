@@ -1,7 +1,7 @@
 import rq from './rq.js'
 import template from './template.js'
 
-rq.get("http://www.reddit.com/r/analog.json")
+rq.get('https://www.reddit.com/r/analog.json')
   .then(render)
   .catch(error => {
     console.error(error)

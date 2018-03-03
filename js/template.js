@@ -1,15 +1,26 @@
-export default function (listing) {
-  var resolutions = listing.preview.images[0].resolutions
-  var images = resolutions.map(image => image.url)
-  var landscape = resolutions[0].width >= resolutions[0].height
-  var sizes = resolutions.map(image => `${image.url} ${image.width}w`).join(', ')
+import getConstraint from './utils/constraint'
+
+export default function (listing, screenRatio) {
+  console.log(listing)
+  let resolutions = listing.preview.images[0].resolutions
+  let images = resolutions.map(image => image.url)
+  let imageRatio = resolutions[0].width / resolutions[0].height
+  let constrain = getConstraint(screenRatio, imageRatio)
+  let sizes = resolutions.map(image => `${image.url} ${image.width}w`).join(', ')
   return `
-    <div class="entry">
-      <img
-        class="entry--image ${landscape ? "entry--image__landscape" : "entry--image__portrait"}"
-        src="${images[3]}" srcset="${sizes}"
-        alt="listing"
-      >
-    </div>
+    <figure class="entry">
+      <div class="entry--content">
+        <img
+          class="entry--image ${constrain} js-image"
+          data-ratio="${imageRatio}"
+          src="${images[3]}"
+          srcset="${sizes}"
+          alt="${listing.title}"
+        >
+        <figcaption class="entry--caption">
+          <a class="entry--link" href="https://reddit.com${listing.permalink}" _target="blank">${listing.title}</a>
+        </figcaption>
+      </div>
+    </figure>
   `
 }

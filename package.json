@@ -10,6 +10,7 @@
   "author": "Paul C Pederson <paul.c.pederson@gmail.com> (http://paulcpederson.com/)",
   "license": "ISC",
   "devDependencies": {
+    "lodash.throttle": "^4.1.1",
     "parcel-bundler": "^1.6.2"
   }
 }

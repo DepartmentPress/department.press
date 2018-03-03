@@ -1,31 +1,61 @@
 body, html {
   padding: 0;
   margin: 0;
+  font-family: 'Menlo', 'Consolas', 'Monaco', 'Liberation Mono', monospace;
+  color: black;
+  font-size: 12px;
+  letter-spacing: -.02em;
+  line-height: 1.5;
 }
 
 .entry {
-  height: 100vh;
-  width: 100vw;
+  margin: 25vh 0;
+  padding: 1.5rem;
   box-sizing: border-box;
   display: flex;
+  flex-direction: column;
+}
+
+.entry:first-child {
+  margin-top: 0;
+}
+
+.entry--content {
+  display: table;
+  margin: auto;
 }
 
 .entry--image {
-  object-fit: contain;
-  padding: 10%;
   max-width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  display: block;
+  box-shadow: 0 5px 12px 1px rgba(0,0,0,0.1);
 }
 
-/*.entry--image__landscape {
-  max-width: 90%;
-  height: auto;
+.constrain-x {
+  max-width: 100%;
 }
 
-.entry--image__portrait {
-  max-height: 90%;
-  width: auto;
-}*/
+.constrain-y {
+  max-height: 90vh;
+}
 
+.entry--caption {
+  display: inline-block;
+  width: 90%;
+  margin-top: 1.5rem;
+}
+
+.entry--link {
+  color: black;
+  text-decoration: none;
+}
+
+.entry--link:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 800px) {
+  .entry--image {
+    max-width: 800px;
+  }
+}

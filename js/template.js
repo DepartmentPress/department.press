@@ -1,7 +1,6 @@
 import getConstraint from './utils/constraint'
 
 export default function (listing, screenRatio) {
-  console.log(listing)
   let resolutions = listing.preview.images[0].resolutions
   let images = resolutions.map(image => image.url)
   let imageRatio = resolutions[0].width / resolutions[0].height

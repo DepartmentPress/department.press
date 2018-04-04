@@ -21,5 +21,10 @@
       <p>Because this page is dynamically populated with content from Reddit, it requires JavaScript to be turned on to fetch the latest content.</p>
     </noscript>
     <script src="js/main.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+      }
+    </script>
   </body>
 </html>

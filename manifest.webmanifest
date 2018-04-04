@@ -1,8 +1,9 @@
 {
   "name": "r/analog",
   "short_name": "r/analog",
-  "description": "Top posts from the analog photograhy subreddit in a readable format",
   "start_url": "/",
+  "description": "Top posts from the analog photograhy subreddit in a readable format",
+  "display": "fullscreen",
   "background_color": "#fff",
   "theme_color": "#fff",
   "icons": [{

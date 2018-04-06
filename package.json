@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html --https --cert dev.ranalog.club.crt --key dev.ranalog.club.key",
-    "deploy": "parcel build index.html --public-url ./ && netlify deploy"
+    "predeploy": "parcel build index.html --public-url ./",
+    "deploy": "netlify deploy"
   },
   "author": "Paul C Pederson <paul.c.pederson@gmail.com> (http://paulcpederson.com/)",
   "license": "ISC",

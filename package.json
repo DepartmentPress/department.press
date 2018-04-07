@@ -6,8 +6,9 @@
   "scripts": {
     "prestart": "rm -rf dist/",
     "start": "parcel index.html --https --cert dev.ranalog.club.crt --key dev.ranalog.club.key",
-    "predeploy": "parcel build index.html --public-url ./",
-    "deploy": "netlify deploy"
+    "predeploy": "rm -rf dist/",
+    "deploy": "parcel build index.html --public-url ./",
+    "postdeploy": "netlify deploy"
   },
   "author": "Paul C Pederson <paul.c.pederson@gmail.com> (http://paulcpederson.com/)",
   "license": "ISC",

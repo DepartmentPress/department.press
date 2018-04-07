@@ -37,7 +37,9 @@ function updateConstraints (e) {
 }
 
 function fadeIn (el) {
-  el.target.parentElement.parentElement.classList.remove('entry__unloaded')
+  if (el.target.classList && el.target.classList.contains('js-image')) {
+    el.target.parentElement.parentElement.classList.remove('entry__unloaded')
+  }
 }
 
 function lazyLoad () {

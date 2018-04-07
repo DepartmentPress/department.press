@@ -24,9 +24,31 @@
     <link rel="apple-touch-icon" href="img/icon-32.png" sizes="32x32">
     <link rel="apple-touch-startup-image" href="img/icon-512.png">
     <link rel="publisher" href="https://plus.google.com/+PaulCPederson">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="manifest" href="manifest.webmanifest">
     <title>r/analog</title>
+    <style>
+      body, html {
+        padding: 0;
+        margin: 0;
+        font-family: 'Menlo', 'Consolas', 'Monaco', 'Liberation Mono', monospace;
+        color: black;
+        font-size: 12px;
+        letter-spacing: -.02em;
+        line-height: 1.5;
+      }
+
+      .site-title {
+        font-size: 12px;
+        font-weight: 400;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        left: 0;
+        top: 50vh;
+        margin: -1rem 0 0 0;
+        z-index: 1;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -37,6 +59,7 @@
       <h2>This page requires JavaScript</h2>
       <p>Because this page is dynamically populated with content from Reddit, it requires JavaScript to be turned on to fetch the latest content.</p>
     </noscript>
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js"></script>
     <script>
       if ('serviceWorker' in navigator) {

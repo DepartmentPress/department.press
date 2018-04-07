@@ -1,25 +1,3 @@
-body, html {
-  padding: 0;
-  margin: 0;
-  font-family: 'Menlo', 'Consolas', 'Monaco', 'Liberation Mono', monospace;
-  color: black;
-  font-size: 12px;
-  letter-spacing: -.02em;
-  line-height: 1.5;
-}
-
-.site-title {
-  font-size: 12px;
-  font-weight: 400;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  left: 0;
-  top: 50vh;
-  margin: -1rem 0 0 0;
-  z-index: 1;
-}
-
 .entry {
   margin: 25vh 0;
   padding: 1.5rem;

@@ -1,4 +1,4 @@
-import getConstraint from './utils/constraint'
+import {getConstraint} from './utils/helpers'
 
 export default function (listing, screenRatio) {
   let resolutions = listing.preview.images[0].resolutions

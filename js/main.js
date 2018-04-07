@@ -1,5 +1,5 @@
 import rq from './utils/rq.js'
-import getConstraint from './utils/constraint.js'
+import {getConstraint, inView, $} from './utils/helpers.js'
 import template from './template.js'
 import throttle from 'lodash.throttle'
 
@@ -18,13 +18,14 @@ function render (response) {
     .filter(listing => listing.preview.images[0].resolutions.length > 5)
     .map(listing => template(listing, ratio))
     .join("")
-  images = Array.prototype.slice.call(document.querySelectorAll('.js-image'))
+  images = $('.js-image')
     .map(image => {
       return {
         node: image,
         ratio: parseFloat(image.getAttribute('data-ratio'))
       }
     })
+  lazyLoad()
 }
 
 function updateConstraints (e) {
@@ -35,4 +36,22 @@ function updateConstraints (e) {
   })
 }
 
-window.addEventListener('resize', throttle(updateConstraints, 25));
+function fadeIn (el) {
+  el.target.parentElement.parentElement.classList.remove('entry__unloaded')
+}
+
+function lazyLoad () {
+  // find all the unloaded entries
+  $('.js-entry.entry__unloaded')
+    .filter(inView)
+    .forEach(el => {
+      var image = el.querySelector('.js-image')
+      image.srcset = image.getAttribute("data-srcset")
+      image.src = image.getAttribute("data-src")
+      image.addEventListener("load", fadeIn)
+    })
+}
+
+window.addEventListener('resize', throttle(updateConstraints, 25))
+window.addEventListener('scroll', throttle(lazyLoad, 200))
+window.addEventListener('load', fadeIn)

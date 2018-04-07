@@ -7,13 +7,13 @@ export default function (listing, screenRatio) {
   let constrain = getConstraint(screenRatio, imageRatio)
   let sizes = resolutions.map(image => `${image.url} ${image.width}w`).join(', ')
   return `
-    <figure class="entry">
+    <figure class="entry entry__unloaded js-entry">
       <div class="entry--content">
         <img
           class="entry--image ${constrain} js-image"
           data-ratio="${imageRatio}"
-          src="${images[3]}"
-          srcset="${sizes}"
+          data-src="${images[3]}"
+          data-srcset="${sizes}"
           alt="${listing.title}"
         >
         <figcaption class="entry--caption">

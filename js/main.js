@@ -4,11 +4,7 @@ import template from './template.js'
 import throttle from 'lodash.throttle'
 
 // activate non-critical CSS
-var link = document.querySelector('link[rel="stylesheet"]')
-link.removeAttribute('disabled')
-link.addEventListener('load', function() {
-  document.body.classList.add('loaded')
-})
+document.querySelector('link[rel="stylesheet"]').removeAttribute('disabled')
 
 // fetch reddit images
 let images = []

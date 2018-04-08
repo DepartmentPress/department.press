@@ -1,5 +1,5 @@
 .entry {
-  margin: 35vh 0;
+  margin: 30vh 0;
   padding: 1.5rem;
   box-sizing: border-box;
   display: flex;
@@ -7,21 +7,19 @@
   position: relative;
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  transition: all 600ms cubic-bezier(0.215, 0.440, 0.420, 0.880) 200ms;
+  transition: opacity 600ms cubic-bezier(0.215, 0.440, 0.420, 0.880) 200ms,
+              translate3d 600ms cubic-bezier(0.215, 0.440, 0.420, 0.880) 200ms;
   z-index: 2;
+}
+
+.entry:first-child {
+  height: 90vh;
+  margin: 0;
 }
 
 .entry__unloaded {
   opacity: 0;
   transform: translate3d(0, 20px, 0);
-}
-
-.entry.constrain-y:first-child {
-  margin-top: 0;
-}
-
-.entry.constrain-x:first-child {
-  margin-top: 12.5vh;
 }
 
 .entry--content {
@@ -40,7 +38,7 @@
 }
 
 .constrain-y {
-  max-height: 90vh;
+  max-height: calc(90vh - 1.5rem);
 }
 
 .entry--caption {

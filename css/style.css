@@ -1,5 +1,5 @@
 .entry {
-  margin: 25vh 0;
+  margin: 35vh 0;
   padding: 1.5rem;
   box-sizing: border-box;
   display: flex;
@@ -7,7 +7,7 @@
   position: relative;
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  transition: all 600ms cubic-bezier(0.215, 0.440, 0.420, 0.880);
+  transition: all 600ms cubic-bezier(0.215, 0.440, 0.420, 0.880) 200ms;
   z-index: 2;
 }
 
@@ -16,8 +16,12 @@
   transform: translate3d(0, 20px, 0);
 }
 
-.entry:first-child {
+.entry.constrain-y:first-child {
   margin-top: 0;
+}
+
+.entry.constrain-x:first-child {
+  margin-top: 12.5vh;
 }
 
 .entry--content {
@@ -58,4 +62,9 @@
   .entry--image {
     max-width: 800px;
   }
+}
+
+.site-title.fade-out {
+  opacity: 0;
+  transform: translate3d(0, -20px, 0);
 }

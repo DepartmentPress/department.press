@@ -17,6 +17,7 @@
   margin: 0;
 }
 
+
 .entry__unloaded {
   opacity: 0;
   transform: translate3d(0, 20px, 0);
@@ -25,6 +26,8 @@
 .entry--content {
   display: table;
   margin: auto;
+  padding-bottom: 3rem;
+  position: relative;
 }
 
 .entry--image {
@@ -42,6 +45,7 @@
 }
 
 .entry--caption {
+  position: absolute;
   display: inline-block;
   width: 90%;
   margin-top: 1.5rem;
@@ -60,9 +64,4 @@
   .entry--image {
     max-width: 800px;
   }
-}
-
-.site-title.fade-out {
-  opacity: 0;
-  transform: translate3d(0, -20px, 0);
 }

@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="Paul C Pederson">
-    <meta name="description" content="View the latest top posts from the analog subreddit">
+    <meta name="author" content="Paul C Pederson, Fork by Nikolas Wise">
+    <meta name="description" content="Prints by Nikolas Wise & Department Press">
     <meta name="viewport" content="width=device-width">
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:creator" content="@paulcpederson">
-    <meta name="twitter:title" content="r/analog">
-    <meta name="twitter:description" content="View the latest top posts from the analog subreddit">
-    <meta property="og:title" content="r/analog">
-    <meta property="og:url" content="https://ranalog.club">
+    <meta name="twitter:creator" content="@nikolaswise">
+    <meta name="twitter:title" content="Department Press">
+    <meta name="twitter:description" content="Prints by Nikolas Wise & Department Press">
+    <meta property="og:title" content="Department Press">
+    <meta property="og:url" content="https://department.press">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/icon-256.png" sizes="256x256">
     <link rel="icon" href="img/icon-64.png" sizes="64x64">
@@ -23,9 +23,9 @@
     <link rel="apple-touch-icon" href="img/icon-64.png" sizes="64x64">
     <link rel="apple-touch-icon" href="img/icon-32.png" sizes="32x32">
     <link rel="apple-touch-startup-image" href="img/icon-512.png">
-    <link rel="publisher" href="https://plus.google.com/+PaulCPederson">
+    <link rel="publisher" href="https://department.press">
     <link rel="manifest" href="manifest.webmanifest">
-    <title>r/analog</title>
+    <title>Department Press</title>
     <style>
       body, html {
         padding: 0;
@@ -60,14 +60,27 @@
       .entry__unloaded {
         opacity: 0;
       }
+      footer p {
+        text-align: center;
+        opacity: 0;
+      }
+      footer.fade-in p {
+        opacity: 1;
+      }
     </style>
     <link rel="stylesheet" href="css/style.css" disabled>
   </head>
   <body>
     <header>
-      <h1 class="site-title">r/analog</h1>
+      <h1 class="site-title">Department Press</h1>
     </header>
+
     <div class="js-photo-wrap"></div>
+
+    <footer>
+      <p>This is a fork of the <a href="https://ranalog.club/">R/Analog</a> project by <a href="http://paulcpederson.com/">Paul Pederson.</a></p>
+    </footer>
+
     <noscript>
       <h2>This page requires JavaScript</h2>
       <p>Because this page is dynamically populated with content from Reddit, it requires JavaScript to be turned on to fetch the latest content.</p>
@@ -75,9 +88,9 @@
     <script src="js/main.js"></script>
     <script>
       // activate the service worker
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js');
-      }
+      // if ('serviceWorker' in navigator) {
+      //   navigator.serviceWorker.register('service-worker.js');
+      // }
     </script>
   </body>
 </html>

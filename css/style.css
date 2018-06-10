@@ -65,3 +65,8 @@
     max-width: 800px;
   }
 }
+
+
+footer p {
+  margin-top: 0;
+}

@@ -44,6 +44,7 @@ function fadeIn (el) {
   if (el.target.classList && el.target.classList.contains('js-image')) {
     el.target.parentElement.parentElement.classList.remove('entry__unloaded')
     document.querySelector('.site-title').classList.add('fade-out')
+    document.querySelector('footer').classList.add('fade-in')
   }
 }
 

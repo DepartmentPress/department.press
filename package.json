@@ -13,6 +13,7 @@
   "author": "Paul C Pederson <paul.c.pederson@gmail.com> (http://paulcpederson.com/)",
   "license": "ISC",
   "devDependencies": {
+    "contentful": "^6.1.1",
     "lodash.throttle": "^4.1.1",
     "parcel-bundler": "^1.7.0"
   },

@@ -63,9 +63,12 @@
       footer p {
         text-align: center;
         opacity: 0;
+        transform: translate3d(0, 20px, 0);
+        transition: all 600ms cubic-bezier(0.215, 0.440, 0.420, 0.880);
       }
       footer.fade-in p {
         opacity: 1;
+        transform: translate3d(0, 0, 0);
       }
     </style>
     <link rel="stylesheet" href="css/style.css" disabled>
@@ -78,7 +81,7 @@
     <div class="js-photo-wrap"></div>
 
     <footer>
-      <p>This is a fork of the <a href="https://ranalog.club/">R/Analog</a> project by <a href="http://paulcpederson.com/">Paul Pederson.</a></p>
+      <p>This is a fork of the <a target="_blank" href="https://ranalog.club/">R/Analog</a> project by <a target="_blank" href="http://paulcpederson.com/">Paul Pederson.</a></p>
     </footer>
 
     <noscript>

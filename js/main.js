@@ -57,7 +57,7 @@ function fadeIn (el) {
 function lazyLoad () {
   // find all the unloaded entries
   $('.js-entry.entry__unloaded')
-    .filter(inView)
+    // .filter(inView)
     .forEach(el => {
       var image = el.querySelector('.js-image')
       // image.srcset = image.getAttribute("data-srcset")

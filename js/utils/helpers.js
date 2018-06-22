@@ -15,6 +15,7 @@ function getConstraint (screenRatio, imageRatio) {
  */
 function inView (el) {
   var isInView = el.getBoundingClientRect().top <= window.innerHeight * 2
+  console.log(isInView && el)
   return isInView && el
 }
 
